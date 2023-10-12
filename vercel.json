@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "static/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/static/(.*)", "use": "@vercel/static" },
+      { "src": "/(.*)", "dest": "/your_django_app_name.py" }
+    ]
+  }
+  
